@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
- 
+    
     var number:Int = 0
     var hunnumber:Int = 1
     var toriga:Int = 0
@@ -29,7 +29,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-       
+        
         // プロトコルの設定
         picker.delegate = self
         picker.dataSource = self
@@ -38,8 +38,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         picker.selectRow(1, inComponent: 0, animated: true)
         
         
-        // 画面にピッカーを追加
-        self.view.addSubview(picker)
+        
     }
     
     // UIPickerViewDataSource
@@ -48,15 +47,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // 表示する列数
         return 2
     }
-
+    
     //アイテムの個数を返す
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0 {
             return 31
-
+            
         }else{
-        return 61
-  
+            return 61
+            
         }}
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -65,7 +64,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-       // 選択時の処理
+        // 選択時の処理
         if component  == 0{
             hunnumber = row
         }else{
@@ -73,39 +72,39 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
-  
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func set(){
-       
-        for _ in 0...100{
-            
+        
+        for _ in 0...50{
+
             let trigger: UNNotificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval:(TimeInterval(hunnumber*60+number+toriga)), repeats: false)
-            
+
             let content = UNMutableNotificationContent()
-            content.title = "タイトルです"
-            content.body = "ボディです"
+            content.title = ""
+            content.body = "さあ、作業を始めよう！"
             content.sound = UNNotificationSound.default()
-            
+
             let request = UNNotificationRequest(identifier: "normal"+String(toriga),
                                                 content: content,
                                                 trigger: trigger)
-           
+
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-    
+
             toriga = toriga + 1
-            
+
             print(number)
-            
+
         }
         
-
-
-
+        self.performSegue(withIdentifier: "toCount", sender: nil)
+        
+        
     }
-
-
+    
+    
 }

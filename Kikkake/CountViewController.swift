@@ -23,15 +23,11 @@ class CountViewController: UIViewController {
         if Cnumber == 0 && Chunnumber >= 1{
             Chunnumber = Chunnumber - 1
             Cnumber = Cnumber + 60
-        }else{
-            
         }
        
+  
         if Cnumber >= 1{
             Cnumber = Cnumber - 1
-        }else{
-            
-            
         }
     
         
@@ -41,9 +37,7 @@ class CountViewController: UIViewController {
         if Cnumber == 0 && Chunnumber == 0{
             timer.invalidate()
             
-            let storyboard: UIStoryboard = self.storyboard!
-            let nextView = storyboard.instantiateViewController(withIdentifier: "Title") as! ViewController
-            self.present(nextView, animated: true, completion: nil)
+          self.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -69,9 +63,10 @@ class CountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cansell(){
+    
+    @IBAction func cancel(){
         timer.invalidate()
-
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*

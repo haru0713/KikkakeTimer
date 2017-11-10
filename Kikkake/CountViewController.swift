@@ -14,6 +14,8 @@ class CountViewController: UIViewController {
     var Chunnumber:Int = 0
     var Cnumber:Int = 0
     var timer = Timer()
+
+    
     @IBOutlet var Chunlabel:UILabel!
     @IBOutlet var Clabel:UILabel!
     
@@ -48,7 +50,7 @@ class CountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+   
 
         Chunlabel.text = String(Chunnumber)
         Clabel.text = String(Cnumber)

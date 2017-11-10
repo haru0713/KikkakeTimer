@@ -13,10 +13,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
  
     var number:Int = 0
     var hunnumber:Int = 1
+    var toriga:Int = 0
+    
     @IBOutlet var picker: UIPickerView!
     // 選択肢
-    let dataList = ["iOS", "macOS", "tvOS", "Android", "Windows"]
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toCount") {
             let countView : CountViewController = segue.destination as! CountViewController
@@ -80,32 +80,30 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
 
     @IBAction func set(){
-        let trigger: UNNotificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval:(TimeInterval(hunnumber*60+number)), repeats: false)
-        
-        let trigger2: UNNotificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval:(TimeInterval(hunnumber*60+number+10)), repeats: false)
-
        
-        
-        //表示の設定
-        let content = UNMutableNotificationContent()
-        content.title = "タイトルです"
-        content.body = "ボディです"
-        content.sound = UNNotificationSound.default()
-        
-        // デフォルトの通知。画像などは設定しない
-        let request = UNNotificationRequest(identifier: "normal",
-                                            content: content,
-                                            trigger: trigger)
-        
-        let request2 = UNNotificationRequest(identifier: "normal",
-                                            content: content,
-                                            trigger: trigger2)
-        
-        
-        //通知を予約
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        UNUserNotificationCenter.current().add(request2, withCompletionHandler: nil)
+        for _ in 0...100{
+            
+            let trigger: UNNotificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval:(TimeInterval(hunnumber*60+number+toriga)), repeats: false)
+            
+            let content = UNMutableNotificationContent()
+            content.title = "タイトルです"
+            content.body = "ボディです"
+            content.sound = UNNotificationSound.default()
+            
+            let request = UNNotificationRequest(identifier: "normal"+String(toriga),
+                                                content: content,
+                                                trigger: trigger)
+           
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     
+            toriga = toriga + 1
+            
+            print(number)
+            
+        }
+        
+
+
 
     }
 

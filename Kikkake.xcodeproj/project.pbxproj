@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		02030AF61F066468006F4577 /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02030AF51F066468006F4577 /* CountViewController.swift */; };
+		0203AC911FD16376005927E9 /* mplus-1c-black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0203AC901FD16376005927E9 /* mplus-1c-black.ttf */; };
+		0203AC931FD164B2005927E9 /* mplus-1c-heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0203AC921FD164B1005927E9 /* mplus-1c-heavy.ttf */; };
 		02C26D7A1F0F8CA500D7A86B /* きっかけ.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C26D791F0F8CA500D7A86B /* きっかけ.png */; };
-		02CDB8AA1FB5C137006CDB7F /* きっかけボタン.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CDB8A91FB5C137006CDB7F /* きっかけボタン.png */; };
 		02FCF2DD1EF3E90500D3B405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FCF2DC1EF3E90500D3B405 /* AppDelegate.swift */; };
 		02FCF2DF1EF3E90500D3B405 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FCF2DE1EF3E90500D3B405 /* ViewController.swift */; };
 		02FCF2E21EF3E90500D3B405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02FCF2E01EF3E90500D3B405 /* Main.storyboard */; };
@@ -38,8 +39,9 @@
 
 /* Begin PBXFileReference section */
 		02030AF51F066468006F4577 /* CountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
+		0203AC901FD16376005927E9 /* mplus-1c-black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mplus-1c-black.ttf"; sourceTree = "<group>"; };
+		0203AC921FD164B1005927E9 /* mplus-1c-heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mplus-1c-heavy.ttf"; sourceTree = "<group>"; };
 		02C26D791F0F8CA500D7A86B /* きっかけ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "きっかけ.png"; path = "../../../画像/きっかけ.png"; sourceTree = "<group>"; };
-		02CDB8A91FB5C137006CDB7F /* きっかけボタン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "きっかけボタン.png"; path = "../../../../Downloads/きっかけボタン.png"; sourceTree = "<group>"; };
 		02FCF2D91EF3E90500D3B405 /* Kikkake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kikkake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02FCF2DC1EF3E90500D3B405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02FCF2DE1EF3E90500D3B405 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,8 +111,9 @@
 				02030AF51F066468006F4577 /* CountViewController.swift */,
 				02FCF2E31EF3E90500D3B405 /* Assets.xcassets */,
 				02FCF2E51EF3E90500D3B405 /* LaunchScreen.storyboard */,
+				0203AC901FD16376005927E9 /* mplus-1c-black.ttf */,
+				0203AC921FD164B1005927E9 /* mplus-1c-heavy.ttf */,
 				02FCF2E81EF3E90500D3B405 /* Info.plist */,
-				02CDB8A91FB5C137006CDB7F /* きっかけボタン.png */,
 				02C26D791F0F8CA500D7A86B /* きっかけ.png */,
 			);
 			path = Kikkake;
@@ -245,8 +248,9 @@
 				02FCF2E71EF3E90500D3B405 /* LaunchScreen.storyboard in Resources */,
 				02FCF2E41EF3E90500D3B405 /* Assets.xcassets in Resources */,
 				02FCF2E21EF3E90500D3B405 /* Main.storyboard in Resources */,
+				0203AC911FD16376005927E9 /* mplus-1c-black.ttf in Resources */,
+				0203AC931FD164B2005927E9 /* mplus-1c-heavy.ttf in Resources */,
 				02C26D7A1F0F8CA500D7A86B /* きっかけ.png in Resources */,
-				02CDB8AA1FB5C137006CDB7F /* きっかけボタン.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
